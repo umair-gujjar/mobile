@@ -1,0 +1,46 @@
+platform :ios, '9.0'
+
+node_modules_path = '../../../../node_modules'
+rn_path = File.join(node_modules_path, 'react-native')
+yoga_path = File.join(rn_path, 'ReactCommon/yoga')
+folly_spec_path = File.join(rn_path, 'third-party-podspecs/Folly.podspec')
+glog_spec_path = File.join(rn_path, 'third-party-podspecs/glog.podspec')
+double_conversion_spec_path = File.join(rn_path, 'third-party-podspecs/DoubleConversion.podspec')
+
+def react_common(rn_path) 
+  pod 'React', path: rn_path, subspecs: [
+    'Core',
+    'DevSupport',
+    'RCTActionSheet',
+    'RCTAnimation',
+    'RCTGeolocation',
+    'RCTImage',
+    'RCTLinkingIOS',
+    'RCTNetwork',
+    'RCTSettings',
+    'RCTText',
+    'RCTVibration',
+    'RCTWebSocket',
+    'CxxBridge',
+  ]
+end 
+
+target 'RNHotels_Example' do
+  pod 'RNHotels', path: '../'
+
+  react_common(rn_path)
+
+  pod 'yoga', path: yoga_path
+  pod 'Folly', podspec: folly_spec_path
+  pod 'DoubleConversion', podspec: double_conversion_spec_path
+  pod 'glog', podspec: glog_spec_path
+
+  pod 'RNLogging', :path => "#{node_modules_path}/@kiwicom/react-native-native-modules"
+  pod 'RNTranslationManager', :path => "#{node_modules_path}/@kiwicom/react-native-native-modules"
+  pod 'RNColors', :path => "#{node_modules_path}/@kiwicom/react-native-native-modules"
+  pod 'RNCurrencyManager', :path => "#{node_modules_path}/@kiwicom/react-native-native-modules"
+  pod 'RNDeviceInfo', :path => "#{node_modules_path}/@kiwicom/react-native-native-modules"
+
+  pod 'react-native-maps', :path => "#{node_modules_path}/react-native-maps"
+  pod 'RNVectorIcons', :path => "#{node_modules_path}/react-native-vector-icons"
+end
