@@ -1,7 +1,7 @@
 require 'json'
 
 # Same version as in package.json
-pkg_version = lambda do |dir_from_root = '../../../', version = 'version'|
+pkg_version = lambda do |dir_from_root = '', version = 'version'|
   path = File.join(__dir__, dir_from_root, 'app', 'hotels', 'package.json')
   JSON.parse(File.read(path))[version]
 end
@@ -9,7 +9,7 @@ end
 kiwi_mobile_version = pkg_version.call
 
 # Use the same RN version that the JS tools use (global package.json)
-pkg_version_global = lambda do |dir_from_root = '../../../'|
+pkg_version_global = lambda do |dir_from_root = ''|
   path = File.join(__dir__, dir_from_root, 'package.json')
   JSON.parse(File.read(path))['dependencies']['react-native']
 end
@@ -26,8 +26,8 @@ Pod::Spec.new do |s|
   s.author           = { 'ferrannp' => 'fnp.developer@gmail.com' }
   s.source           = { git: 'https://github.com/kiwicom/mobile/tree/master/native/ios/RNHotels', tag: s.version.to_s }
 
-  s.source_files   = 'Pod/Classes/**/*.{h,m}'
-  s.resources      = 'Pod/Assets/{RNHotels.js,assets}'
+  s.source_files   = 'native/ios/RNHotels/Pod/Classes/**/*.{h,m}'
+  s.resources      = 'native/ios/RNHotels/Pod/Assets/{RNHotels.js,assets}'
   s.platform       = :ios, '8.0'
 
   # React is split into a set of subspecs, these are the essentials
@@ -42,16 +42,16 @@ Pod::Spec.new do |s|
   # React's dependencies
   s.dependency 'yoga', "#{react_native_version}.React"
   podspecs = [
-    '../../../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec',
-    '../../../node_modules/react-native/third-party-podspecs/Folly.podspec',
-    '../../../node_modules/react-native/third-party-podspecs/glog.podspec',
-    '../../../node_modules/@kiwicom/react-native-native-modules/RNLogging.podspec',
-    '../../../node_modules/@kiwicom/react-native-native-modules/RNTranslationManager.podspec',
-    '../../../node_modules/@kiwicom/react-native-native-modules/RNColors.podspec',
-    '../../../node_modules/@kiwicom/react-native-native-modules/RNCurrencyManager.podspec',
-    '../../../node_modules/@kiwicom/react-native-native-modules/RNDeviceInfo.podspec',
-    '../../../node_modules/react-native-maps/react-native-maps.podspec',
-    '../../../node_modules/react-native-vector-icons/RNVectorIcons.podspec'
+    'node_modules/react-native/third-party-podspecs/DoubleConversion.podspec',
+    'node_modules/react-native/third-party-podspecs/Folly.podspec',
+    'node_modules/react-native/third-party-podspecs/glog.podspec',
+    'node_modules/@kiwicom/react-native-native-modules/RNLogging.podspec',
+    'node_modules/@kiwicom/react-native-native-modules/RNTranslationManager.podspec',
+    'node_modules/@kiwicom/react-native-native-modules/RNColors.podspec',
+    'node_modules/@kiwicom/react-native-native-modules/RNCurrencyManager.podspec',
+    'node_modules/@kiwicom/react-native-native-modules/RNDeviceInfo.podspec',
+    'node_modules/react-native-maps/react-native-maps.podspec',
+    'node_modules/react-native-vector-icons/RNVectorIcons.podspec'
   ]
   
   podspecs.each do |podspec_path|

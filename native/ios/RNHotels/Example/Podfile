@@ -26,7 +26,7 @@ def react_common(rn_path)
 end 
 
 target 'RNHotels_Example' do
-  pod 'RNHotels', path: '../'
+  pod 'RNHotels', path: '../../../..'
 
   react_common(rn_path)
 
