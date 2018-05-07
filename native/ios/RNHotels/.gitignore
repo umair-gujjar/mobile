@@ -35,8 +35,3 @@ Carthage/Build
 # `pod install` in .travis.yml
 #
 Pods/
-
-# Hotels build
-RNHotels.js*
-Pod/Assets/assets/app
-Pod/Assets/assets/node_modules
