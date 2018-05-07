@@ -38,24 +38,13 @@ Pod::Spec.new do |s|
   s.dependency 'React/RCTLinkingIOS', react_native_version
   s.dependency 'React/RCTNetwork', react_native_version
   s.dependency 'React/RCTText', react_native_version
+  s.dependency 'React/RCTGeolocation', react_native_version
+  s.dependency 'React/DevSupport', react_native_version
 
   # React's dependencies
   s.dependency 'yoga', "#{react_native_version}.React"
-  podspecs = [
-    'node_modules/react-native/third-party-podspecs/DoubleConversion.podspec',
-    'node_modules/react-native/third-party-podspecs/Folly.podspec',
-    'node_modules/react-native/third-party-podspecs/glog.podspec',
-    'node_modules/@kiwicom/react-native-native-modules/RNLogging.podspec',
-    'node_modules/@kiwicom/react-native-native-modules/RNTranslationManager.podspec',
-    'node_modules/@kiwicom/react-native-native-modules/RNColors.podspec',
-    'node_modules/@kiwicom/react-native-native-modules/RNCurrencyManager.podspec',
-    'node_modules/@kiwicom/react-native-native-modules/RNDeviceInfo.podspec',
-    'node_modules/react-native-maps/react-native-maps.podspec',
-    'node_modules/react-native-vector-icons/RNVectorIcons.podspec'
-  ]
   
-  podspecs.each do |podspec_path|
-    spec = Pod::Specification.from_file podspec_path
-    s.dependency spec.name, "#{spec.version}"
-  end
+  # Native modules
+  s.dependency 'react-native-maps', '0.21.0'
+  s.dependency 'RNVectorIcons', '4.6.0'
 end
