@@ -1,20 +1,29 @@
 require 'json'
 
 # Same version as in package.json
-pkg_version = lambda do |dir_from_root = '', version = 'version'|
+packageJson = lambda do |dir_from_root = ''|
   path = File.join(__dir__, dir_from_root, 'app', 'hotels', 'package.json')
-  JSON.parse(File.read(path))[version]
+  JSON.parse(File.read(path))
 end
 
-kiwi_mobile_version = pkg_version.call
+pkg_version = packageJson.call['version']
+kiwi_mobile_version = pkg_version
+react_native_maps_version = packageJson.call['dependencies']['react-native-maps']
+
+sharedPackageJson = lambda do |dir_from_root = ''|
+  path = File.join(__dir__, dir_from_root, 'app', 'shared', 'package.json')
+  JSON.parse(File.read(path))
+end
+
+react_native_vector_icons = sharedPackageJson.call['dependencies']['react-native-vector-icons']
 
 # Use the same RN version that the JS tools use (global package.json)
-pkg_version_global = lambda do |dir_from_root = ''|
+globalPackageJson = lambda do |dir_from_root = ''|
   path = File.join(__dir__, dir_from_root, 'package.json')
-  JSON.parse(File.read(path))['dependencies']['react-native']
+  JSON.parse(File.read(path))
 end
 
-react_native_version = pkg_version_global.call
+react_native_version = globalPackageJson.call['dependencies']['react-native']
 
 Pod::Spec.new do |s|
   s.name             = 'RNHotels'
@@ -28,7 +37,7 @@ Pod::Spec.new do |s|
 
   s.source_files   = 'native/ios/RNHotels/Pod/Classes/**/*.{h,m}'
   s.resources      = 'native/ios/RNHotels/Pod/Assets/{RNHotels.js,assets}'
-  s.platform       = :ios, '8.0'
+  s.platform       = :ios, '9.0'
 
   # React is split into a set of subspecs, these are the essentials
   s.dependency 'React/Core', react_native_version
@@ -45,6 +54,6 @@ Pod::Spec.new do |s|
   s.dependency 'yoga', "#{react_native_version}.React"
   
   # Native modules
-  s.dependency 'react-native-maps', '0.21.0'
-  s.dependency 'RNVectorIcons', '4.6.0'
+  s.dependency 'react-native-maps', react_native_maps_version
+  s.dependency 'RNVectorIcons', react_native_vector_icons
 end
