@@ -26,7 +26,7 @@ end
 react_native_version = globalPackageJson.call['dependencies']['react-native']
 
 Pod::Spec.new do |s|
-  s.name             = 'RNHotels'
+  s.name             = 'RNHotelsSpec'
   s.version          = kiwi_mobile_version
   s.description      = 'Components for RNHotels.'
   s.summary          = 'Components for RNHotels.'

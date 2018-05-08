@@ -4,5 +4,5 @@ source 'git@gitlab.skypicker.com:mobile/react-native-native-modules.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'RNHotels_Example' do
-    pod 'RNHotels', :path => '../../../..'
+    pod 'RNHotelsSpec', :path => '../../../..'
 end
