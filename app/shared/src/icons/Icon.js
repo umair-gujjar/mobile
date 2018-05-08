@@ -1,8 +1,15 @@
 // @flow
 
 import * as React from 'react';
+import { Platform } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import type { StylePropType } from '@kiwicom/mobile-shared';
+
+// We need loadFont for CocoaPods
+// See https://github.com/oblador/react-native-vector-icons#option-with-cocoapods
+if (Platform.OS === 'ios') {
+  MaterialIcons.loadFont();
+}
 
 import Color from '../Color';
 
