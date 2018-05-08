@@ -31,8 +31,8 @@
         _userLocation = userLocation;
         _affilID = affilID;
 
-        _resourceName = @"hotels.ios";
-        _jsBundleExtension = @"jsbundle"; 
+        _resourceName = @"RNHotels";
+        _jsBundleExtension = @"js";
         _moduleName = @"KiwiHotels";
     }
 
