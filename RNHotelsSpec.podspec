@@ -58,6 +58,7 @@ Pod::Spec.new do |s|
   s.dependency 'RNColors'
   s.dependency 'RNCurrencyManager'
   s.dependency 'RNDeviceInfo'
+  s.dependency 'RNNavigator'
   
   # Native modules
   s.dependency 'react-native-maps', react_native_maps_version
