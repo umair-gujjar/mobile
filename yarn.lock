@@ -5492,7 +5492,7 @@ react-native-image-progress@^1.1.0:
   dependencies:
     prop-types "^15.5.10"
 
-react-native-maps@^0.21.0:
+react-native-maps@0.21.0:
   version "0.21.0"
   resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.21.0.tgz#005f58e93d7623ad59667e8002101970ddf235c2"
   dependencies:
@@ -5539,7 +5539,7 @@ react-native-tooltips@^0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/react-native-tooltips/-/react-native-tooltips-0.0.4.tgz#5ade5c6e4e3cfaef8551f42b75052660b3907dac"
 
-react-native-vector-icons@^4.6.0:
+react-native-vector-icons@4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-4.6.0.tgz#e4014311ffa6de397d914ffc31b7097a874cc8d5"
   dependencies:
@@ -5547,7 +5547,7 @@ react-native-vector-icons@^4.6.0:
     prop-types "^15.5.10"
     yargs "^8.0.2"
 
-react-native@^0.55.3:
+react-native@0.55.3:
   version "0.55.3"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.55.3.tgz#6ff1691bd0645d0480fba16377edb9dce5bd28c4"
   dependencies:

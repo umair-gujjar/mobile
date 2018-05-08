@@ -53,6 +53,12 @@ Pod::Spec.new do |s|
   # React's dependencies
   s.dependency 'yoga', "#{react_native_version}.React"
   
+  s.dependency 'RNLogging'
+  s.dependency 'RNTranslationManager'
+  s.dependency 'RNColors'
+  s.dependency 'RNCurrencyManager'
+  s.dependency 'RNDeviceInfo'
+  
   # Native modules
   s.dependency 'react-native-maps', react_native_maps_version
   s.dependency 'RNVectorIcons', react_native_vector_icons
