@@ -35,3 +35,6 @@ Carthage/Build
 # `pod install` in .travis.yml
 #
 Pods/
+
+# We should include the assets folder from node_modules on pods
+!node_modules/
