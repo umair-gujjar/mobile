@@ -5,8 +5,17 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 plugin 'cocoapods-fix-react-native'
 
+def fix_react_native_status_bar
+    Pod::UI.info 'Patching RCTStatusBarManager.m'
+    exec "sed -i -e 's/RCTLogError/\\/\\/RCTLogError/g' Pods/React/React/Modules/RCTStatusBarManager.m"
+end
+
 target 'RNHotels_Example' do
     use_frameworks!
     
     pod 'RNHotelsSpec', :path => '../../../..'
+    
+    post_install do |installer|
+        fix_react_native_status_bar()
+    end
 end
