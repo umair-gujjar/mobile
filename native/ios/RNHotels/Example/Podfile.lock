@@ -1,0 +1,131 @@
+PODS:
+  - boost-for-react-native (1.63.0)
+  - DoubleConversion (1.1.5)
+  - Folly (2016.09.26.00):
+    - boost-for-react-native
+    - DoubleConversion
+    - glog
+  - glog (0.3.4)
+  - React (0.55.3):
+    - React/Core (= 0.55.3)
+  - react-native-maps (0.21.0):
+    - React
+  - React/Core (0.55.3):
+    - yoga (= 0.55.3.React)
+  - React/CxxBridge (0.55.3):
+    - Folly (= 2016.09.26.00)
+    - React/Core
+    - React/cxxreact
+  - React/cxxreact (0.55.3):
+    - boost-for-react-native (= 1.63.0)
+    - Folly (= 2016.09.26.00)
+    - React/jschelpers
+    - React/jsinspector
+  - React/DevSupport (0.55.3):
+    - React/Core
+    - React/RCTWebSocket
+  - React/fishhook (0.55.3)
+  - React/jschelpers (0.55.3):
+    - Folly (= 2016.09.26.00)
+    - React/PrivateDatabase
+  - React/jsinspector (0.55.3)
+  - React/PrivateDatabase (0.55.3)
+  - React/RCTAnimation (0.55.3):
+    - React/Core
+  - React/RCTBlob (0.55.3):
+    - React/Core
+  - React/RCTGeolocation (0.55.3):
+    - React/Core
+  - React/RCTImage (0.55.3):
+    - React/Core
+    - React/RCTNetwork
+  - React/RCTLinkingIOS (0.55.3):
+    - React/Core
+  - React/RCTNetwork (0.55.3):
+    - React/Core
+  - React/RCTText (0.55.3):
+    - React/Core
+  - React/RCTWebSocket (0.55.3):
+    - React/Core
+    - React/fishhook
+    - React/RCTBlob
+  - RNColors (0.1.26):
+    - React
+  - RNCurrencyManager (0.1.26):
+    - React
+  - RNDeviceInfo (0.1.26):
+    - React
+  - RNHotelsSpec (0.0.23):
+    - react-native-maps (= 0.21.0)
+    - React/Core (= 0.55.3)
+    - React/CxxBridge (= 0.55.3)
+    - React/DevSupport (= 0.55.3)
+    - React/RCTAnimation (= 0.55.3)
+    - React/RCTGeolocation (= 0.55.3)
+    - React/RCTImage (= 0.55.3)
+    - React/RCTLinkingIOS (= 0.55.3)
+    - React/RCTNetwork (= 0.55.3)
+    - React/RCTText (= 0.55.3)
+    - RNColors
+    - RNCurrencyManager
+    - RNDeviceInfo
+    - RNLogging
+    - RNNavigator
+    - RNTranslationManager
+    - RNVectorIcons (= 4.6.0)
+    - yoga (= 0.55.3.React)
+  - RNLogging (0.1.26):
+    - React
+  - RNNavigator (0.1.26):
+    - React
+  - RNTranslationManager (0.1.26):
+    - React
+  - RNVectorIcons (4.6.0):
+    - React
+  - yoga (0.55.3.React)
+
+DEPENDENCIES:
+  - RNHotelsSpec (from `../../../..`)
+
+SPEC REPOS:
+  "git@gitlab.skypicker.com:mobile/react-native-native-modules.git":
+    - React
+    - react-native-maps
+    - RNColors
+    - RNCurrencyManager
+    - RNDeviceInfo
+    - RNLogging
+    - RNNavigator
+    - RNTranslationManager
+    - RNVectorIcons
+    - yoga
+  https://github.com/CocoaPods/Specs.git:
+    - boost-for-react-native
+    - DoubleConversion
+    - Folly
+    - glog
+
+EXTERNAL SOURCES:
+  RNHotelsSpec:
+    :path: "../../../.."
+
+SPEC CHECKSUMS:
+  boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
+  DoubleConversion: e22e0762848812a87afd67ffda3998d9ef29170c
+  Folly: 211775e49d8da0ca658aebc8eab89d642935755c
+  glog: 1de0bb937dccdc981596d3b5825ebfb765017ded
+  React: 573d89cf10312b17920df6328eaf9ab8059283bf
+  react-native-maps: fb06a43ce6884256097eec1dd69d23957b71df88
+  RNColors: fed27e0b9252ca2ff6c5a4cc562052a30b8dd1a3
+  RNCurrencyManager: 67c8f33b6541856bc1e4d11b34c6bed7ba427e1a
+  RNDeviceInfo: 1ab530db56aa8acc507264312b2f057c4341ee38
+  RNHotelsSpec: 589af6fee1ece895121cd33fcb199f85645c9e0b
+  RNLogging: 3dede28d45bac17afc3a19f88e1652a714009480
+  RNNavigator: e9eb71e6ed22b031017584839cfb0a84b39880aa
+  RNTranslationManager: ce63887e18444a84c3e550c31da9178e44ce187c
+  RNVectorIcons: a3c395829c56e2cb054a0730126298bf805a2dca
+  yoga: c77e87fb2714f364de2de6be76f8419e018b65e7
+
+PODFILE CHECKSUM: 24608adfb51bff833cdd0532d6f4c9b45fe2647c
+
+COCOAPODS: 1.5.0

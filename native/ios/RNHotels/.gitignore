@@ -38,3 +38,6 @@ Pods/
 
 # We should include the assets folder from node_modules on pods
 !node_modules/
+
+# We should include Podfile.lock too
+!Podfile.lock
